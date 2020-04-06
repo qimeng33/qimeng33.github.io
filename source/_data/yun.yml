@@ -70,6 +70,19 @@ pages:
     color: hotpink
 girls:
   enable: true
+reward:
+  - name: 支付宝
+    path: source\images\zfb.png
+    color: "#00A3EE"
+    icon: icon-alipay-line
+  - name: QQ 支付
+    path: source\images\qq.png
+    color: "#12B7F5"
+    icon: icon-qq-line
+  - name: 微信支付
+    path: source\images\wx.png
+    color: "#2DC100"
+    icon: icon-wechat-pay-line
 live_time:
   enable: true
   prefix: 本博客已萌萌哒地运行
