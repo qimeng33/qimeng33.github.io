@@ -3,6 +3,13 @@ banner:
   title: 七梦的小站
   src: /js/ui/banner.js
   author: 七梦
+head:
+  css:
+    aplayer: https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css
+  js:
+    defer:
+      aplayer: https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js
+      loadAplayer: /js/load-aplayer.js
 notice:
   enable: true
   content: Thanks for playing my game.
@@ -61,6 +68,8 @@ pages:
     url: /girls/
     icon: icon-women-line
     color: hotpink
+girls:
+  enable: true
 live_time:
   enable: true
   prefix: 本博客已萌萌哒地运行
