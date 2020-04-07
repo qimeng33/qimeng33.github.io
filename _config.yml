@@ -5,15 +5,15 @@
 # Site
 title: 七梦的小站
 subtitle: ''
-description: ''
+description: '肉身燃烧于荆棘之中，他的心中却开满花朵。'
 keywords:
 author: 七梦
-language: en
+language: zh-CN
 timezone: ''
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: http://qimeng33.github.io/
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:

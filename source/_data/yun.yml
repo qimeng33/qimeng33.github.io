@@ -59,6 +59,10 @@ social:
     link: https://t.me/AsabaAyane
     icon: icon-telegram-fill
     color: "#0088CC"
+  - name: 淘宝
+    link: https://shop238970456.taobao.com/?spm=a1z10.1-c.0.0.79373531qtdMPd
+    icon: icon-external-link-line
+    color: "#FF8EB3"
 pages:
   - name: 我的小伙伴们
     url: /links/
@@ -72,15 +76,15 @@ girls:
   enable: true
 reward:
   - name: 支付宝
-    path: source\images\zfb.png
+    path: https://cdn.jsdelivr.net/gh/qimeng33/qimeng33.github.io@1.0/images/zfb.png
     color: "#00A3EE"
     icon: icon-alipay-line
   - name: QQ 支付
-    path: source\images\qq.png
+    path: https://cdn.jsdelivr.net/gh/qimeng33/qimeng33.github.io@1.0/images/qq.png
     color: "#12B7F5"
     icon: icon-qq-line
   - name: 微信支付
-    path: source\images\wx.png
+    path: https://cdn.jsdelivr.net/gh/qimeng33/qimeng33.github.io@1.0/images/wx.png
     color: "#2DC100"
     icon: icon-wechat-pay-line
 live_time:
