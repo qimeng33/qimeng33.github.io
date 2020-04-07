@@ -102,9 +102,3 @@ deploy:
   type: git
   repo: https://github.com/qimeng33/qimeng33.github.io.git
   branch: master
-
-search:
-  path: search.xml
-  field: post
-  format: html
-  limit: 10000

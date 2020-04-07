@@ -92,3 +92,23 @@ live_time:
   prefix: 本博客已萌萌哒地运行
   suffix: (●'◡'●)
   start_time: "2020-04-05T00:00:00"
+
+search:
+  bg_image: https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/bg/stars-timing-2.jpg
+
+engine_search:
+  enable: false
+  href: "https://www.google.com/search?q=site:"
+  domain: yunyoujun.cn
+
+# https://github.com/wzpan/hexo-generator-search
+local_search:
+  enable: true
+  src: /js/search/local-search.js
+
+# https://github.com/oncletom/hexo-algolia
+algolia_search:
+  enable: false
+  src: /js/search/algolia-search.js
+  hits:
+   per_page: 8 # the number of search results per page
