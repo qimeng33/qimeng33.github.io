@@ -10,10 +10,12 @@ head:
     defer:
       aplayer: https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js
       loadAplayer: /js/load-aplayer.js
+
 notice:
   enable: true
   content: Thanks for playing my game.
 scrollreveal: true
+
 avatar:
   enable: true
   url: /images/tx.jpg
@@ -72,8 +74,18 @@ pages:
     url: /girls/
     icon: icon-women-line
     color: hotpink
+
 girls:
   enable: true
+
+reward_settings:
+  # If true, reward would be displayed in every posts and pages by default.
+  # You can show or hide reward in a specific page throuth `reward: true | false` in Front Matter.
+  enable: true
+  icon: icon-hand-coin-line
+  comment: 我很可爱，请给我钱！
+  # url: https://github.com/YunYouJun/yunyoujun.github.io/issues/96
+
 reward:
   - name: 支付宝
     path: https://cdn.jsdelivr.net/gh/qimeng33/qimeng33.github.io@1.0/images/zfb.png
@@ -87,6 +99,7 @@ reward:
     path: https://cdn.jsdelivr.net/gh/qimeng33/qimeng33.github.io@1.0/images/wx.png
     color: "#2DC100"
     icon: icon-wechat-pay-line
+
 live_time:
   enable: true
   prefix: 本博客已萌萌哒地运行
@@ -98,3 +111,26 @@ engine_search:
 local_search:
   enable: true
   src: /js/search/local-search.js
+
+valine:
+  enable: true
+  appId: untdNr8jjOfMvI43eUg3CeQ2-9Nh9j0Va # your leancloud application appid
+  appKey: MzEdoLUG7Xk4HCpDfAl7dLhV # your leancloud application appkey
+
+github_issues:
+  enable: true
+  username: qimeng33
+  repository: qimeng33.github.io
+  filters: is:issue
+
+symbols_count_time:
+  item_text_post: true
+  item_text_total: true
+  awl: 2
+  wpm: 250
+
+cursor:
+  enable: true
+  default: https://cdn.jsdelivr.net/gh/YunYouJun/cdn/css/md-cursors/pointer.cur
+  pointer: https://cdn.jsdelivr.net/gh/YunYouJun/cdn/css/md-cursors/link.cur
+  text: https://cdn.jsdelivr.net/gh/YunYouJun/cdn/css/md-cursors/text.cur
