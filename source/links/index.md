@@ -18,7 +18,14 @@ links:
     name: 一真
     blog: 古琴记录
     desc: 鳶飛魚躍，無處不是化境。
-    color: "#0078e7" # 代表色
+    color: "#855E42" # 代表色
+    email: # 非必须
+  - url: https://blog.zaihua.me/
+    avatar: https://imgs.zaihua.me/img/20200409210254.jpg
+    name: 在花
+    blog: 科技花
+    desc: 一条猛男
+    color: "#426F42" # 代表色
     email: # 非必须
 placeholder: 还没想好说些什么 # 默认对友链的描述
 tip: 友链加载中～如失败请刷新重试～
