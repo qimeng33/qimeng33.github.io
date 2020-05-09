@@ -38,7 +38,7 @@
   text-align: center;
 }
 body {
-  font-family: Lato, 'PingFang SC', 'Microsoft YaHei', Roboto, Arial, sans-serif;
+  font-family: 'PingFang SC', 'Microsoft YaHei', Roboto, Arial, sans-serif;
   font-weight: 300;
   margin: 0;
   padding: 0;
@@ -181,7 +181,8 @@ a:hover {
 input {
   cursor: url("https://cdn.jsdelivr.net/gh/YunYouJun/cdn/css/md-cursors/text.cur"), auto;
 }
-.banner {
+#banner {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -202,7 +203,7 @@ input {
   bottom: 0;
 }
 .char {
-  font-family: 'Noto Serif SC', 'Songti SC', STZhonngSong, STKaiti, KaiTi, Roboto, serif;
+  font-family: 'Songti SC', 'Noto Serif SC', STZhongsong, STKaiti, KaiTi, Roboto, serif;
   font-size: var(--banner-char-size);
   font-weight: 900;
   background-color: rgba(255,255,255,0.5);
@@ -630,7 +631,7 @@ input {
   padding-left: 0.6rem;
 }
 .link-item .link-blog {
-  font-family: 'Noto Serif SC', 'Songti SC', STZhonngSong, STKaiti, KaiTi, Roboto, serif;
+  font-family: 'Songti SC', 'Noto Serif SC', STZhongsong, STKaiti, KaiTi, Roboto, serif;
   font-weight: 900;
   margin: 0.42rem 0;
 }
@@ -1095,7 +1096,7 @@ input {
   background: rgba(0,120,231,0.3);
 }
 .post-collapse .collection-title .archive-year {
-  font-family: 'Courier New', Courier, Consolas, Monaco, monospace;
+  font-family: 'Source Code Pro', 'Courier New', Courier, Consolas, Monaco, monospace;
   color: #00305c;
   margin: 0 1.5rem;
 }
@@ -1159,7 +1160,7 @@ input {
   margin-right: 0.3rem;
 }
 .post-collapse .post-header .post-meta {
-  font-family: 'Courier New', Courier, Consolas, Monaco, monospace;
+  font-family: 'Source Code Pro', 'Courier New', Courier, Consolas, Monaco, monospace;
   font-size: 1rem;
   margin: 1rem 0 1rem 1.2rem;
   white-space: nowrap;
@@ -1178,7 +1179,7 @@ input {
   padding: 10px;
   font-size: 1.5rem;
   font-weight: 900;
-  font-family: 'Noto Serif SC', 'Songti SC', STZhonngSong, STKaiti, KaiTi, Roboto, serif;
+  font-family: 'Songti SC', 'Noto Serif SC', STZhongsong, STKaiti, KaiTi, Roboto, serif;
 }
 .post-header .post-title .icon {
   width: 1.6rem;
@@ -1233,6 +1234,9 @@ input {
 .post-markdown {
   line-height: 1.8;
 }
+.post-markdown p {
+  overflow: auto;
+}
 .post-markdown h1 {
   font-size: 2.5em;
   border-bottom: 1px solid rgba(153,153,153,0.5);
@@ -1273,7 +1277,7 @@ input {
 .post-markdown pre,
 .post-markdown code {
   overflow: auto;
-  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  font-family: 'Source Code Pro', 'Courier New', Courier, Consolas, Monaco, monospace !important;
   font-size: 0.85rem;
   line-height: 1.6;
   border-radius: 3px;
@@ -1620,7 +1624,7 @@ td {
   color: #db2828;
 }
 .post-toc ol .toc-number {
-  font-family: 'Courier New', Courier, Consolas, Monaco, monospace;
+  font-family: 'Source Code Pro', 'Courier New', Courier, Consolas, Monaco, monospace;
 }
 .post-toc ol .toc-child {
   overflow: hidden;
@@ -1778,7 +1782,7 @@ td {
 }
 .site-name {
   color: #303133;
-  font-family: 'Noto Serif SC', 'Songti SC', STZhonngSong, STKaiti, KaiTi, Roboto, serif;
+  font-family: 'Songti SC', 'Noto Serif SC', STZhongsong, STKaiti, KaiTi, Roboto, serif;
   font-weight: 900;
 }
 .site-subtitle {
@@ -1879,7 +1883,7 @@ td {
   padding: 0.6rem 0;
 }
 #local-search-result ul.search-result-list li .search-result-title {
-  font-family: 'Noto Serif SC', 'Songti SC', STZhonngSong, STKaiti, KaiTi, Roboto, serif;
+  font-family: 'Songti SC', 'Noto Serif SC', STZhongsong, STKaiti, KaiTi, Roboto, serif;
   font-weight: 900;
   font-size: 1.2rem;
 }
@@ -1927,7 +1931,7 @@ td {
   box-sizing: border-box;
   width: 90%;
   max-width: 800px;
-  font-family: 'Noto Serif SC', 'Songti SC', STZhonngSong, STKaiti, KaiTi, Roboto, serif;
+  font-family: 'Songti SC', 'Noto Serif SC', STZhongsong, STKaiti, KaiTi, Roboto, serif;
   font-weight: 900;
   text-align: center;
 }
@@ -1971,7 +1975,7 @@ td {
 #say {
   display: block;
   text-align: center;
-  font-family: 'Noto Serif SC', 'Songti SC', STZhonngSong, STKaiti, KaiTi, Roboto, serif;
+  font-family: 'Songti SC', 'Noto Serif SC', STZhongsong, STKaiti, KaiTi, Roboto, serif;
   font-weight: bold;
   padding: 0.5rem;
   border-top: 1px solid #000;
@@ -1989,7 +1993,7 @@ td {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-family: 'Noto Serif SC', 'Songti SC', STZhonngSong, STKaiti, KaiTi, Roboto, serif;
+  font-family: 'Songti SC', 'Noto Serif SC', STZhongsong, STKaiti, KaiTi, Roboto, serif;
   font-weight: bold;
   padding: 1rem;
   margin: 1rem auto;
@@ -2094,7 +2098,7 @@ td {
   box-sizing: border-box;
   width: 90%;
   max-width: 800px;
-  font-family: 'Noto Serif SC', 'Songti SC', STZhonngSong, STKaiti, KaiTi, Roboto, serif;
+  font-family: 'Songti SC', 'Noto Serif SC', STZhongsong, STKaiti, KaiTi, Roboto, serif;
   font-weight: 900;
   text-align: center;
 }
@@ -2152,7 +2156,7 @@ td {
 }
 .girl-item .girl-from {
   font-size: 12px;
-  font-family: 'Noto Serif SC', 'Songti SC', STZhonngSong, STKaiti, KaiTi, Roboto, serif;
+  font-family: 'Songti SC', 'Noto Serif SC', STZhongsong, STKaiti, KaiTi, Roboto, serif;
   font-weight: bold;
   color: #303133;
 }

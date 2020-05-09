@@ -3,17 +3,16 @@ function random(min, max) {
   return Math.random() * (max - min) + min;
 }
 
-function generateBanner(banner) {
+function generateBanner(title) {
   let sumH = 0;
-  let bannerContainer = document.querySelector(".banner");
   let lineTop = document.querySelector(".vertical-line-top");
   let lineBottom = document.querySelector(".vertical-line-bottom");
-  for (let i = 0; i < banner.length; i++) {
+  for (let i = 0; i < title.length; i++) {
     let charBox = document.createElement("div");
     let rn = random(1.5, 3.5);
-    charBox.innerHTML = "<span class='char'>" + banner[i] + "</span>";
+    charBox.innerHTML = "<span class='char'>" + title[i] + "</span>";
     let charSize = rn + "rem";
-    bannerContainer.insertBefore(charBox, lineBottom);
+    banner.insertBefore(charBox, lineBottom);
     if (i % 2 == 0) {
       charBox.classList.add("char-left");
       charBox.style.setProperty("--banner-char-size", charSize);
@@ -38,3 +37,14 @@ function generateBanner(banner) {
 setTimeout(() => {
   generateBanner(CONFIG.title);
 }, 100);
+
+let wheeling = false;
+window.addEventListener("wheel", function(e) {
+  if (window.scrollY < banner.clientHeight && e.deltaY > 0 && !wheeling) {
+    wheeling = true;
+    window.scrollTo(0, banner.clientHeight);
+    setTimeout(function() {
+      wheeling = false;
+    }, 200);
+  }
+});
