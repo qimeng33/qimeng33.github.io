@@ -19,10 +19,6 @@ function scrollPercent(curTop) {
 }
 
 function initPage() {
-  if (typeof ScrollReveal !== "undefined") {
-    ScrollReveal().reveal(".post-card");
-  }
-
   // open sidebar
   document.querySelector(".sidebar-toggle").onclick = function() {
     this.querySelector(".hamburger").classList.toggle("is-active");
@@ -33,6 +29,9 @@ function initPage() {
     goUp.classList.toggle("show", window.scrollY > 64);
     scrollPercent(window.scrollY);
   });
+
+  // wrap
+  Yun.utils.wrapTable();
 }
 
 document.addEventListener("DOMContentLoaded", () => {

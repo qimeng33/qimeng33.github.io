@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
   const ap = new APlayer({
     container: document.getElementById("aplayer"),
     fixed: true,
-    autoplay: false,
+    autoplay: true,
     audio: [
       {
         name: "鱼",
