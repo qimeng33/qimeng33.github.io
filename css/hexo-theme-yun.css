@@ -2045,111 +2045,162 @@ td {
     border-right-width: 0px;
   }
 }
-.album-list {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-mode: 'dark';
+  }
+  :root:not([data-user-color-scheme]) {
+    --hty-bg-color: #303030;
+    --hty-text-color: #f2f2f2;
+    --hty-secondary-text-color: #eee;
+    --banner-line-color: #fff;
+    --banner-char-color: #fff;
+    --post-block-bg-color: #17202a;
+  }
+  :root:not([data-user-color-scheme]) body {
+    color: var(--hty-text-color);
+  }
+  :root:not([data-user-color-scheme]) body::before {
+    background-image: url("");
+  }
+  :root:not([data-user-color-scheme]) a {
+    color: #3ca1ff;
+  }
+  :root:not([data-user-color-scheme]) a:hover {
+    color: #0078e7;
+  }
+  :root:not([data-user-color-scheme]) .char {
+    background-color: rgba(0,0,0,0.5);
+  }
+  :root:not([data-user-color-scheme]) .char:hover {
+    color: #000;
+  }
+  :root:not([data-user-color-scheme]) .sidebar {
+    background-color: rgba(23,32,42,0.95);
+    background-image: url("");
+  }
+  :root:not([data-user-color-scheme]) .search-popup {
+    background-image: url("https://i.loli.net/2020/05/31/OxlvJGLbPD85hua.jpg");
+  }
+  :root:not([data-user-color-scheme]) .post-card {
+    color: #fff;
+    background-color: rgba(23,32,42,0.8);
+    box-shadow: 0 1px 8px rgba(23,32,42,0.1);
+  }
+  :root:not([data-user-color-scheme]) .post-block {
+    color: var(--hty-text-color);
+    background-color: rgba(23,32,42,0.95);
+  }
+  :root:not([data-user-color-scheme]) .page-number-basic {
+    background-color: rgba(0,0,0,0.5);
+  }
+  :root:not([data-user-color-scheme]) .pagination .prev,
+  :root:not([data-user-color-scheme]) .pagination .next,
+  :root:not([data-user-color-scheme]) .pagination .page-number,
+  :root:not([data-user-color-scheme]) .pagination .space {
+    background-color: rgba(0,0,0,0.5);
+  }
+  :root:not([data-user-color-scheme]) .pagination .prev:hover,
+  :root:not([data-user-color-scheme]) .pagination .next:hover,
+  :root:not([data-user-color-scheme]) .pagination .page-number:hover,
+  :root:not([data-user-color-scheme]) .pagination .space:hover {
+    background: #0078e7;
+  }
+  :root:not([data-user-color-scheme]) .pagination .prev:active,
+  :root:not([data-user-color-scheme]) .pagination .next:active,
+  :root:not([data-user-color-scheme]) .pagination .page-number:active,
+  :root:not([data-user-color-scheme]) .pagination .space:active {
+    background: #0078e7;
+  }
+  :root:not([data-user-color-scheme]) .pagination .prev.current,
+  :root:not([data-user-color-scheme]) .pagination .next.current,
+  :root:not([data-user-color-scheme]) .pagination .page-number.current,
+  :root:not([data-user-color-scheme]) .pagination .space.current {
+    background: rgba(116,188,255,0.9);
+    cursor: default;
+  }
+  :root:not([data-user-color-scheme]) #footer {
+    color: #eee;
+  }
+  :root:not([data-user-color-scheme]) .aplayer {
+    color: #000;
+  }
 }
-.album-list-item {
-  display: inline-flex;
+[data-user-color-scheme='dark'] {
+  --hty-bg-color: #303030;
+  --hty-text-color: #f2f2f2;
+  --hty-secondary-text-color: #eee;
+  --banner-line-color: #fff;
+  --banner-char-color: #fff;
+  --post-block-bg-color: #17202a;
 }
-.album-list-item figure {
-  position: relative;
-  width: 15rem;
-  margin: 2rem;
+[data-user-color-scheme='dark'] body {
+  color: var(--hty-text-color);
 }
-.album-list-item figure::before {
-  content: '';
-  position: absolute;
-  top: 1%;
-  left: 0.5%;
-  width: 100%;
-  height: 96%;
-  border: 0.25rem solid #fff;
-  background-color: #666;
-  box-shadow: 0 5px 10px rgba(0,0,0,0.3);
-  transform: rotate(-3deg);
+[data-user-color-scheme='dark'] body::before {
+  background-image: url("");
 }
-.album-list-item figure img {
-  vertical-align: bottom;
-  display: inline-flex;
-  border: 0.25rem solid #fff;
-  box-shadow: 0 8px 10px rgba(0,0,0,0.3);
-  padding: 0;
-  transform: rotate(2deg);
-  width: 100%;
-  height: 10rem;
-  object-fit: cover;
-  background-color: #eee;
+[data-user-color-scheme='dark'] a {
+  color: #3ca1ff;
 }
-.album-list-item figure figcaption {
-  position: absolute;
-  bottom: -2.5rem;
-  display: block;
-  text-align: center;
-  width: 100%;
-}
-.photo-list {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-.photo-list-item {
-  display: inline-flex;
-  position: relative;
-  width: 15rem;
-  margin: 1.5rem;
-  cursor: url("https://cdn.jsdelivr.net/gh/YunYouJun/cdn/css/md-cursors/link.cur"), pointer;
-}
-.photo-list-item img {
-  box-sizing: border-box;
-  vertical-align: bottom;
-  display: inline-flex;
-  border: 0.25rem solid #fff;
-  box-shadow: 0 8px 10px rgba(0,0,0,0.1);
-  width: 100%;
-  height: 10rem;
-  object-fit: cover;
-  background-color: #eee;
-}
-.photo-list-item figcaption {
-  position: absolute;
-  bottom: -1.8rem;
-  display: block;
-  text-align: center;
-  width: 100%;
-  font-size: 0.9rem;
-}
-#decryptContainer {
-  display: flex;
-  height: 10rem;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-}
-#decrypt-password {
-  outline: none;
-  font-size: 1.5rem;
-  border-radius: 3rem;
-  padding: 0.5rem 1.5rem;
-  border: 1px solid #999;
-  box-sizing: border-box;
-  width: 90%;
-  max-width: 800px;
-  font-family: 'Songti SC', 'Noto Serif SC', STZhongsong, STKaiti, KaiTi, Roboto, serif;
-  font-weight: 900;
-  text-align: center;
-}
-#decryptButton {
+[data-user-color-scheme='dark'] a:hover {
   color: #0078e7;
-  background-color: rgba(0,120,231,0.08);
 }
-#decryptButton:active {
-  background-color: rgba(0,120,231,0.3);
+[data-user-color-scheme='dark'] .char {
+  background-color: rgba(0,0,0,0.5);
 }
-#decryptButton .icon {
-  width: 1.5rem;
-  height: 1.5rem;
+[data-user-color-scheme='dark'] .char:hover {
+  color: #000;
+}
+[data-user-color-scheme='dark'] .sidebar {
+  background-color: rgba(23,32,42,0.95);
+  background-image: url("");
+}
+[data-user-color-scheme='dark'] .search-popup {
+  background-image: url("https://i.loli.net/2020/05/31/OxlvJGLbPD85hua.jpg");
+}
+[data-user-color-scheme='dark'] .post-card {
+  color: #fff;
+  background-color: rgba(23,32,42,0.8);
+  box-shadow: 0 1px 8px rgba(23,32,42,0.1);
+}
+[data-user-color-scheme='dark'] .post-block {
+  color: var(--hty-text-color);
+  background-color: rgba(23,32,42,0.95);
+}
+[data-user-color-scheme='dark'] .page-number-basic {
+  background-color: rgba(0,0,0,0.5);
+}
+[data-user-color-scheme='dark'] .pagination .prev,
+[data-user-color-scheme='dark'] .pagination .next,
+[data-user-color-scheme='dark'] .pagination .page-number,
+[data-user-color-scheme='dark'] .pagination .space {
+  background-color: rgba(0,0,0,0.5);
+}
+[data-user-color-scheme='dark'] .pagination .prev:hover,
+[data-user-color-scheme='dark'] .pagination .next:hover,
+[data-user-color-scheme='dark'] .pagination .page-number:hover,
+[data-user-color-scheme='dark'] .pagination .space:hover {
+  background: #0078e7;
+}
+[data-user-color-scheme='dark'] .pagination .prev:active,
+[data-user-color-scheme='dark'] .pagination .next:active,
+[data-user-color-scheme='dark'] .pagination .page-number:active,
+[data-user-color-scheme='dark'] .pagination .space:active {
+  background: #0078e7;
+}
+[data-user-color-scheme='dark'] .pagination .prev.current,
+[data-user-color-scheme='dark'] .pagination .next.current,
+[data-user-color-scheme='dark'] .pagination .page-number.current,
+[data-user-color-scheme='dark'] .pagination .space.current {
+  background: rgba(116,188,255,0.9);
+  cursor: default;
+}
+[data-user-color-scheme='dark'] #footer {
+  color: #eee;
+}
+[data-user-color-scheme='dark'] .aplayer {
+  color: #000;
 }
 #girls {
   text-align: center;
