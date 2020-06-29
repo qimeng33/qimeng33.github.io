@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://qimeng.life/"/>
-  <updated>2020-06-27T10:30:09.734Z</updated>
+  <updated>2020-06-29T14:49:01.351Z</updated>
   <id>http://qimeng.life/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>gd-utils搭建教程</title>
+    <link href="http://qimeng.life/2020/06/29/gd-utils%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/"/>
+    <id>http://qimeng.life/2020/06/29/gd-utils%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/</id>
+    <published>2020-06-29T14:24:31.000Z</published>
+    <updated>2020-06-29T14:49:01.351Z</updated>
+    
+    <content type="html"><![CDATA[<p>本教程非VPS搭建，也非本地搭建，而是基于Google Colaboratory</p><p>感谢提供此方案的大佬</p><a id="more"></a><p><a href="https://github.com/iwestlin/gd-utils" target="_blank" rel="noopener">源项目地址</a></p><h2 id="搭建过程"><a href="#搭建过程" class="headerlink" title="搭建过程"></a>搭建过程</h2><h3 id="使用Google-Colaboratory"><a href="#使用Google-Colaboratory" class="headerlink" title="使用Google Colaboratory"></a>使用Google Colaboratory</h3><p>首先打开<a href="https://colab.research.google.com/" target="_blank" rel="noopener">Google Colaboratory</a></p><p>点击文件&gt;新建笔记本</p><p><img src="https://i.loli.net/2020/06/29/OAuZS3ptseHg5kW.png" alt="image.png" loading="lazy"></p><p>可自行命名此文件，点击代码，添加一个新的代码块</p><p><img src="https://i.loli.net/2020/06/29/nT6ht2PiJUKclOd.png" alt="image.png" loading="lazy"></p><h3 id="下载gd-utils"><a href="#下载gd-utils" class="headerlink" title="下载gd-utils"></a>下载gd-utils</h3><p>在代码块中输入</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">!git clone https://github.com/iwestlin/gd-utils  <span class="comment">#下载gd-utils</span></span><br><span class="line">%cd gd-utils   <span class="comment">#进入gd-utils目录下</span></span><br></pre></td></tr></table></figure><p>点击执行按钮，执行该代码</p><p><img src="https://i.loli.net/2020/06/29/o496IpZnwOyXM7R.png" alt="image.png" loading="lazy"></p><h3 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h3><p>等待执行完成后，再次添加代码块，输入并执行以下代码</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">!curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -</span><br><span class="line">!apt-get install -y nodejs   <span class="comment">#安装node.js</span></span><br></pre></td></tr></table></figure><h3 id="安装依赖"><a href="#安装依赖" class="headerlink" title="安装依赖"></a>安装依赖</h3><p>执行完成后，再次添加代码块，输入并执行以下代码</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">!npm install --unsafe-perm=true --allow-root  <span class="comment">#安装依赖</span></span><br><span class="line">!apt install pm2</span><br><span class="line">!npm i pm2 -g</span><br></pre></td></tr></table></figure><h3 id="生成Service-Account"><a href="#生成Service-Account" class="headerlink" title="生成Service Account"></a>生成Service Account</h3><p>执行完成后，将生成的sa文件全部导入左侧的sa文件夹</p><p>生成sa的方法请参考<a href="https://gsuitems.com/index.php/archives/13/#%E6%AD%A5%E9%AA%A42%E7%94%9F%E6%88%90serviceaccounts" target="_blank" rel="noopener">https://gsuitems.com/index.php/archives/13/#%E6%AD%A5%E9%AA%A42%E7%94%9F%E6%88%90serviceaccounts</a></p><p>因为Google Colaboratory采用python,生成SA的步骤也可以在Colaboratory上面完成。</p><p>下载页面左侧config.js,修改对应条目后再上传至根目录下</p><p><img src="https://i.loli.net/2020/06/29/o4DF3gsXVyBba9W.png" alt="image.png" loading="lazy"></p><h3 id="完成"><a href="#完成" class="headerlink" title="完成"></a>完成</h3><p>完成以上步骤后，再次添加代码块，输入并执行以下代码</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">!pm2 start server.js</span><br></pre></td></tr></table></figure><p>以上都顺利完成后下面就可以开始使用gd-utils了。</p><p>使用方法参考源项目。</p><p><img src="https://i.loli.net/2020/06/29/7KZV5YgWrjhlX2b.png" alt="image.png" loading="lazy"></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;本教程非VPS搭建，也非本地搭建，而是基于Google Colaboratory&lt;/p&gt;
+&lt;p&gt;感谢提供此方案的大佬&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="技术" scheme="http://qimeng.life/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="Google" scheme="http://qimeng.life/tags/Google/"/>
+    
+  </entry>
   
   <entry>
     <title>十二、世界葡萄酒名庄</title>
